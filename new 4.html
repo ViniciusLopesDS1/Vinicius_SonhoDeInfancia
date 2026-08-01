@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Deixe sua Opinião</title>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/jpg" href="image/ideia.jpg">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script>
+			function validar() {
+				var nome = document.form1.nome.value;
+				var avaliacao = document.form1.avaliacao.value;
+
+				if (nome == "") {
+					alert("Por favor, preencha o campo NOME!");
+					document.form1.nome.focus();
+					return false;
+				}
+
+				if (avaliacao == "") {
+					alert("Por favor, escolha uma avaliação!");
+					document.form1.avaliacao.focus();
+					return false;
+				}
+
+				return true;
+			}
+
+			function processarform() {
+				if (validar()) {
+					alert("Dados enviados com sucesso!");
+					document.form1.reset();
+				}
+				return false;
+			}
+			</script>
+	</head>
+	<body>
+	
+		<main>
+	
+			<header>
+			<nav class="menu">
+
+				<ul>
+					<li><a href="index.html">Sonho</a></li>
+					<li><a href="new 2.html">Hoje</a></li>
+					<li><a href="new 3.html">Futuro</a></li>
+					<li><a href="new 4.html" class="active">Contato</a></li>
+				</ul>
+
+			</nav>
+		</header>
+		
+		<h1 align="center">Deixe a Sua Opinião</h1></div>
+		
+		<div class="banner">
+			<img src="image/tecnico.jpg" alt="Tecnologia">
+		</div>
+		
+		<section class="conteudo">
+		
+		<div class="texto">
+		<p>
+	    <form name="form1" onsubmit="return processarform()" method="post">
+		<table border="0">
+			<tr>
+				<td><label>Nome:
+				</td></tr>
+			<tr>
+				<td><input type="text" name="nome" size="40" maxlength="50">
+				</label></td></tr>
+			<tr>
+				<td><label>Avaliação:
+				</td></tr>
+			<tr>
+				<td>
+					<select name="avaliacao">
+						<option value="">Selecione</option>
+						<option value="1">1 </option>
+						<option value="2">2 </option>
+						<option value="3">3 </option>
+						<option value="4">4 </option>
+						<option value="5">5 </option>
+					</select>
+				</td>
+			</tr>
+				<td><label>Obs:
+				</td></tr>
+			<tr>	 
+				<td><textarea id="textarea" name="textarea"   rows ="10" cols="52"   placeholder="Deixe aqui seu comentário.">
+				</textarea></td></label></tr>
+			<tr>
+				<td>
+					<input type="submit" value="Enviar">
+					<input type="reset" value="Limpar">
+				</td>
+			</tr>
+			
+		</table>
+		
+		</p>
+		
+		</div>
+
+		</section>
+		
+		</main>
+		
+		<footer>
+		
+			<h5>
+				Vinicius Lopes da Silva 2026 - © Todos os direitos reservados <br>
+				Trabalho acadêmico sem fins lucrativos
+			</h5>
+			
+		</footer>
+		
+	</body>
+</html>
